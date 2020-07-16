@@ -463,7 +463,34 @@ void lapangan()
     glScalef (4 ,1 , 45);
     glutSolidCube(2);
     glPopMatrix ();
-
+	
+	//atap
+    glPushMatrix (); //kanan dinding
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (170 , 10, -100); //x,y,z
+    glRotatef (90, 0, 0, 1);
+    glScalef (25 ,5,75);
+    glutSolidCube(2);
+    glPopMatrix ();
+    
+    
+    glPushMatrix (); //belakang dinding
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (0 , 10, -250);
+    glRotatef (90, 0, 0, 1);
+    glScalef (50,90 , 5);
+    glutSolidCube(2);
+    glPopMatrix ();
+    
+    glPushMatrix (); //belakang atap
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (0 , 57, -240);
+    glRotatef (90, 0, 0, 1);
+    glScalef (3, 90, 60);
+    glutSolidCube(2);
+    glPopMatrix ();
+    
+	
     //kursi penonton bagian kiri
     glPushMatrix ();
     glColor3f (0.7,0.5,2.0);
