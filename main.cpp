@@ -19,8 +19,8 @@ int is_depth;
 int main(int argc, char **argv){
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
-	glutInitWindowSize(1000, 800);
-	glutInitWindowPosition(40, 40);
+	glutInitWindowSize(800, 600);
+	glutInitWindowPosition(20, 20);
 	glutCreateWindow("Agista Nindy Yuliarina-672018171");
 	init();
 	glutDisplayFunc(tampil);
@@ -66,7 +66,371 @@ void lapangan()
     glutSolidCube(2);
     glPopMatrix ();
 
-    //pager
+    //kursi penonton bagian depan
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (60 , -27.5, -20);
+    glRotatef (90, 0, 0, 1);
+    glScalef (10 ,30 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (58 , -24.5, -10);
+    glRotatef (90, 0, 0, 1);
+    glScalef (13 ,32 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (56 , -21.5, 0);
+    glRotatef (90, 0, 0, 1);
+    glScalef (16 ,34 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (54 , -18.5, 10);
+    glRotatef (90, 0, 0, 1);
+    glScalef (19 ,36 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (52 , -15.5, 20);
+    glRotatef (90, 0, 0, 1);
+    glScalef (22 ,38 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (50 , -12.5, 30);
+    glRotatef (90, 0, 0, 1);
+    glScalef (25 ,40 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (-60 , -27.5, -20);
+    glRotatef (90, 0, 0, 1);
+    glScalef (10 ,30 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (-58 , -24.5, -10);
+    glRotatef (90, 0, 0, 1);
+    glScalef (13 ,32 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (-56 , -21.5, 0);
+    glRotatef (90, 0, 0, 1);
+    glScalef (16 ,34 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (-54 , -18.5, 10);
+    glRotatef (90, 0, 0, 1);
+    glScalef (19 ,36 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (-52 , -15.5, 20);
+    glRotatef (90, 0, 0, 1);
+    glScalef (22 ,38 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (-50 , -12.5, 30);
+    glRotatef (90, 0, 0, 1);
+    glScalef (25 ,40 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (0 , -9.5, 40);
+    glRotatef (90, 0, 0, 1);
+    glScalef (28 ,90 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    //pintu akses masuk
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (0 , -11, 40);
+    glRotatef (90, 0, 0, 1);
+    glScalef (25 ,10 ,6);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    //garis lapangan
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (75 , -22.5, -98);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,1 , 48.5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    //garis kecil gawang
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (-55 , -22.5, -98);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,1 , 21);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (-65 , -22.5, -98);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,1 , 8.5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (65 , -22.5, -98);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,1 , 8.5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (55 , -22.5, -98);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,1 , 21);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    //garis gawang
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (0 , -22.5, -98);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,1 , 47);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (-75 , -22.5, -98);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,1 , 47);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (0 , -22.5, -145);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,76 , 1);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (0 , -22.5, -50);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,76 , 1);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    //garis kecil gawang
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (-64 , -22.5, -120);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,10 , 1);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (-64 , -22.5, -76);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,10 , 1);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (-70 , -22.5, -90);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,5 , 1);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (-70 , -22.5, -105);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,5 , 1);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (64 , -22.5, -120);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,10 , 1);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (64 , -22.5, -76);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,10 , 1);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (70 , -22.5, -90);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,5 , 1);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (70 , -22.5, -105);
+    glRotatef (90, 0, 0, 1);
+    glScalef (1 ,5 , 1);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+
+    //gawang kanan
+    glPushMatrix ();
+    glColor3f(8.0,4.0,4.0);
+    glTranslatef (-70 , -22.5, -98);
+    glRotatef (90, 0, 0, 1);
+    glScalef (30, 10, 15);
+    glutWireCube(1);
+    glPopMatrix ();
+
+    //gawang kiri
+    glPushMatrix ();
+    glColor3f(8.0,4.0,4.0);
+    glTranslatef (70 , -22.5, -98);
+    glRotatef (90, 0, 0, 1);
+    glScalef (30, 10, 15);
+    glutWireCube(1);
+    glPopMatrix ();
+
+
+    //kursi penonton bagian belakang
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (0 , -27.5, -180);
+    glRotatef (90, 0, 0, 1);
+    glScalef (10 ,90 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (0 , -24.5, -190);
+    glRotatef (90, 0, 0, 1);
+    glScalef (13 ,90 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (0 , -21.5, -200);
+    glRotatef (90, 0, 0, 1);
+    glScalef (16 ,90 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (0 , -18.5, -210);
+    glRotatef (90, 0, 0, 1);
+    glScalef (19 ,90 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (0 , -15.5, -220);
+    glRotatef (90, 0, 0, 1);
+    glScalef (22 ,90 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (0 , -12.5, -230);
+    glRotatef (90, 0, 0, 1);
+    glScalef (25 ,90 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.0,0.8,1.0);
+    glTranslatef (0 , -9.5, -240);
+    glRotatef (90, 0, 0, 1);
+    glScalef (28 ,90 ,5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    //lampu kanan
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (95 , 2, -180);
+    glRotatef (90, 1, 0, 0);
+    glScalef (2 ,2 , 40);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (95 , 45, -180);
+    glRotatef (30, 0, 1, 1);
+    glScalef (2 ,10 , 10);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    //lampu kiri
+    glPushMatrix();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (-95 , 2, -180);
+    glRotatef (90, 1, 0, 0);
+    glScalef (2 ,2 , 40);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix ();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (-95 , 45, -180);
+    glRotatef (150, 0, 1, 1);
+    glScalef (2 ,10 , 10);
+    glutSolidCube(2);
+    glPopMatrix();
+
     //pager sponsor
     glPushMatrix ();
     glColor3f (0.0,0.8,1.0);
@@ -78,7 +442,7 @@ void lapangan()
 
     glPushMatrix ();
     glColor3f (0.0,0.8,1.0);
-    glTranslatef (0 , -20, -150);
+    glTranslatef (0 , -20, -160);
     glRotatef (90, 0, 0, 1);
     glScalef (4 ,70 , 1);
     glutSolidCube(2);
@@ -100,69 +464,137 @@ void lapangan()
     glutSolidCube(2);
     glPopMatrix ();
 
-    //kursi penonton
-    glPushMatrix ();
+    //cone
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(65 , -25, -60);
+    glRotatef(90, 0, 0, 1);
+    glScalef(7, 7, 7);
+    glutSolidCube(1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(65 , -25, -60);
+    glRotatef(-90, 1, 0, 0);
+    glScalef(1, 1, 10);
+    glutSolidCone(4,1,50,1);
+    glPopMatrix();
+
+    //tiang bendera
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(75 , -22.5, -150);
+    glRotatef(90, 1, 0, 0);
+    glScalef(1 ,1 , 15);
+    glutSolidCube(1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(75 , -16, -150);
+    glRotatef(45, 0, 0, 1);
+    glScalef(1, 1, 10);
+    glutSolidCone(1,0.5,4,1);
+    glPopMatrix();
+
+
+    //atap
+    glPushMatrix (); //kanan dinding
     glColor3f (1.0,1.0,1.0);
-    glTranslatef (-120 , -23, -80);
-    glRotatef (100, 1, 1, 1);
-    glScalef (5 ,1 , 85);
-    glutSolidCube(1.5);
+    glTranslatef (170 , 10, -100); //x,y,z
+    glRotatef (90, 0, 0, 1);
+    glScalef (50 ,5,75);
+    glutSolidCube(2);
     glPopMatrix ();
 
-    glPushMatrix ();
+    glPushMatrix (); //kanan atas
     glColor3f (1.0,1.0,1.0);
-    glTranslatef (-120 , -25, -140);
-    glRotatef (110, 1, 1, 1);
-    glScalef (5 ,1 , 85);
-    glutSolidCube(1.5);
+    glTranslatef (130 , 60, -100); //x,y,z
+    glRotatef (90, 0, 0, 1);
+    glScalef (3 ,45,75);
+    glutSolidCube(2);
     glPopMatrix ();
 
-    //kursi kiri bag kanan
-    glPushMatrix ();
-    glColor3f (0.7,0.5,1.0);
-    glTranslatef (-95 , -27.5, -50);
+    glPushMatrix (); //kiri dinding
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (-170 , 10, -100); //x,y,z
     glRotatef (90, 0, 0, 1);
-    glScalef (10 ,5 , 25);
+    glScalef (50 ,5,75);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix (); //kiri atas
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (-130 , 60, -100); //x,y,z
+    glRotatef (90, 0, 0, 1);
+    glScalef (3 ,45,75);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix (); //belakang dinding
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (0 , 10, -250);
+    glRotatef (90, 0, 0, 1);
+    glScalef (50,90 , 5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix (); //belakang atap
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef (0 , 60, -200);
+    glRotatef (90, 0, 0, 1);
+    glScalef (3, 90, 30);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+
+    //kursi penonton bagian kiri
+    glPushMatrix ();
+    glColor3f (0.7,0.5,2.0);
+    glTranslatef (-95 , -27.5, -100);
+    glRotatef (90, 0, 0, 1);
+    glScalef (10 ,5 , 75.5);
     glutSolidCube(2);
     glPopMatrix ();
 
     glPushMatrix ();
     glColor3f (0.7,0.5,2.0);
-    glTranslatef (-105 , -24, -51);
+    glTranslatef (-105 , -24, -100);
     glRotatef (90, 0, 0, 1);
-    glScalef (13 ,5 , 26);
-    glutSolidCube(2);
-    glPopMatrix ();
-
-    glPushMatrix ();
-    glColor3f (0.7,0.5,1.0);
-    glTranslatef (-115 , -21, -52.5);
-    glRotatef (90, 0, 0, 1);
-    glScalef (16 ,5 , 28);
+    glScalef (13 ,5 , 75.5);
     glutSolidCube(2);
     glPopMatrix ();
 
     glPushMatrix ();
     glColor3f (0.7,0.5,2.0);
-    glTranslatef (-125 , -18, -54.5);
+    glTranslatef (-115 , -21, -100);
     glRotatef (90, 0, 0, 1);
-    glScalef (19 ,5 , 30);
+    glScalef (16 ,5 , 75.5);
     glutSolidCube(2);
     glPopMatrix ();
 
     glPushMatrix ();
     glColor3f (0.7,0.5,2.0);
-    glTranslatef (-135 , -15, -56.5);
+    glTranslatef (-125 , -18, -100);
     glRotatef (90, 0, 0, 1);
-    glScalef (22 ,5 , 32);
+    glScalef (19 ,5 , 75.5);
     glutSolidCube(2);
     glPopMatrix ();
 
     glPushMatrix ();
     glColor3f (0.7,0.5,2.0);
-    glTranslatef (-145 , -12, -58.5);
+    glTranslatef (-135 , -15, -100);
     glRotatef (90, 0, 0, 1);
-    glScalef (25 ,5 , 34);
+    glScalef (22 ,5 , 75.5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.7,0.5,2.0);
+    glTranslatef (-145 , -12, -100);
+    glRotatef (90, 0, 0, 1);
+    glScalef (25 ,5 , 75.5);
     glutSolidCube(2);
     glPopMatrix ();
 
@@ -170,17 +602,76 @@ void lapangan()
     glColor3f (0.7,0.5,2.0);
     glTranslatef (-155 , -9, -100);
     glRotatef (90, 0, 0, 1);
-    glScalef (28 ,7 , 75.5);
+    glScalef (28 ,8 , 75.5);
     glutSolidCube(2);
 
-    //kursi belakang
+    //kursi penonton bagian kanan
     glPushMatrix ();
-    glColor3f (1.0,1.0,1.0);
-    glTranslatef (80 , -20, -130);
+    glColor3f (0.7,0.5,2.0);
+    glTranslatef (105 , -24.5, -100);
     glRotatef (90, 0, 0, 1);
-    glScalef (4 ,1 , 45);
+    glScalef (13 ,5 , 75.5);
     glutSolidCube(2);
     glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.7,0.5,2.0);
+    glTranslatef (105 , -24.5, -100);
+    glRotatef (90, 0, 0, 1);
+    glScalef (13 ,5 , 75.5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.7,0.5,2.0);
+    glTranslatef (95 , -27.5, -100);
+    glRotatef (90, 0, 0, 1);
+    glScalef (10 ,5 , 75.5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.7,0.5,2.0);
+    glTranslatef (115 , -21.5, -100);
+    glRotatef (90, 0, 0, 1);
+    glScalef (16 ,5 , 75.5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.7,0.5,2.0);
+    glTranslatef (125 , -18.5, -100);
+    glRotatef (90, 0, 0, 1);
+    glScalef (19 ,5 , 75.5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.7,0.5,2.0);
+    glTranslatef (135 , -15.5, -100);
+    glRotatef (90, 0, 0, 1);
+    glScalef (22 ,5 , 75.5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.7,0.5,2.0);
+    glTranslatef (145 , -12.5, -100);
+    glRotatef (90, 0, 0, 1);
+    glScalef (25 ,5 , 75.5);
+    glutSolidCube(2);
+    glPopMatrix ();
+
+    glPushMatrix ();
+    glColor3f (0.7,0.5,2.0);
+    glTranslatef (155 , -9.5, -100);
+    glRotatef (90, 0, 0, 1);
+    glScalef (28 ,10 , 75.5);
+    glutSolidCube(2);
+
+
+
+
 
 }
 
@@ -250,7 +741,7 @@ void ukuran(int lebar, int tinggi){
 
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(80, lebar / tinggi, 25, 800);
+    gluPerspective(50, lebar / tinggi, 5, 500);
     glTranslatef(0, -5, -250);
     glMatrixMode(GL_MODELVIEW);
 }
