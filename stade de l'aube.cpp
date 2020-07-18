@@ -21,7 +21,7 @@ int main(int argc, char **argv){
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 	glutInitWindowSize(800, 600);
 	glutInitWindowPosition(20, 20);
-	glutCreateWindow("Agista Nindy Yuliarina-672018171");
+	glutCreateWindow("STADE DE L'AUBE");
 	init();
 	glutDisplayFunc(tampil);
 	glutKeyboardFunc(keyboard);
@@ -514,6 +514,345 @@ void lapangan()
     glutSolidCone(1,0.5,4,1);
     glPopMatrix();
 
+    //pager kursi penonton bagian belakang
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-1,-10,-170);
+    glRotatef(90,0,0,1);
+    glScalef(1.5,88,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-1,-2,-170);
+    glRotatef(90,0,0,1);
+    glScalef(1.5,88,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(3.5,10,-173);
+    glRotatef(90,0,0,1);
+    glScalef(1.5,87,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-1,-18,-170);
+    glRotatef(90,0,0,1);
+    glScalef(1.5,88,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-87,-15,-170);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-84,5,-170);
+    glRotatef(70,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-50,-15,-170);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-47,5,-170);
+    glRotatef(70,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-5,-15,-170);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-2,5,-170);
+    glRotatef(70,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(40,-15,-170);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(43,5,-170);
+    glRotatef(70,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(85,-15,-170);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(87,5,-170);
+    glRotatef(70,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    //pager kursi penonton bagian kanan
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(90,-10,-94);
+    glRotatef(90,1,0,0);
+    glScalef(1.5,70,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(90,-2,-94);
+    glRotatef(90,1,0,0);
+    glScalef(1.5,70,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(95,10,-94);
+    glRotatef(90,1,0,0);
+    glScalef(1.5,70,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(90,-18,-94);
+    glRotatef(90,1,0,0);
+    glScalef(1.5,70,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(88,-15,-165);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(92,5,-165);
+    glRotatef(60,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(88,-15,-130);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(92,5,-130);
+    glRotatef(60,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(88,-15,-90);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(92,5,-90);
+    glRotatef(60,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(88,-15,-50);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(92,5,-50);
+    glRotatef(60,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(88,-15,-25);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(92,5,-25);
+    glRotatef(65,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    //pager kursi penonton bagian kiri
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-90,-10,-94);
+    glRotatef(90,1,0,0);
+    glScalef(1.5,70,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-90,-2,-94);
+    glRotatef(90,1,0,0);
+    glScalef(1.5,70,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-95,10,-94);
+    glRotatef(90,1,0,0);
+    glScalef(1.5,70,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-90,-18,-94);
+    glRotatef(90,1,0,0);
+    glScalef(1.5,70,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-88,-15,-165);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-92,5,-165);
+    glRotatef(125,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-88,-15,-130);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-92,5,-130);
+    glRotatef(125,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-88,-15,-90);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-92,5,-90);
+    glRotatef(125,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-88,-15,-50);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-92,5,-50);
+    glRotatef(125,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-88,-15,-25);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-92,5,-25);
+    glRotatef(125,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
 
     //atap
     glPushMatrix (); //kanan dinding
@@ -758,6 +1097,6 @@ void ukuran(int lebar, int tinggi){
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(50, lebar / tinggi, 5, 500);
-    glTranslatef(0, -25, -300);
+    glTranslatef(0, -40, -300);
     glMatrixMode(GL_MODELVIEW);
 }
