@@ -1,5 +1,7 @@
 #include<windows.h>
 #include<gl/glut.h>
+#include<math.h>
+
 
 void init(void);
 void tampil(void);
@@ -14,6 +16,9 @@ float adiff=0.0f;
 float bdiff=0.0f;
 bool mouseDown=false;
 int is_depth;
+
+const double PI = 3.141592653589793;
+int a,radius,jumlah_titik,x_tengah,y_tengah;
 
 int main(int argc, char **argv){
     glutInit(&argc, argv);
@@ -198,11 +203,19 @@ void lapangan()
     glPopMatrix ();
 
     //lingkaran lapangan
-    glPushMatrix();
-    glColor3f(1.0,1.0,1.0);
-    glTranslatef(0,-38,-100);
-    glutWireSphere(20,100,50);
-    glPopMatrix();
+    glBegin(GL_LINE_STRIP);
+	glColor3f(1.0,1.0,1.0);
+	radius=-100;
+	jumlah_titik=50;
+	x_tengah=-10;
+	y_tengah=-1000;
+	for (a=10;a<=30;a++){
+        float sudut=a*(2*PI/jumlah_titik);
+        float x=x_tengah+radius*cos(sudut);
+        float y=y_tengah+radius*sin(sudut);
+		glVertex2f(x/50,y/100);
+	}
+	glEnd();
 
     //garis kecil gawang
     glPushMatrix ();
@@ -354,39 +367,6 @@ void lapangan()
     glutWireCube(1);
     glPopMatrix ();
 
-    //cone
-    glPushMatrix();
-    glColor3f(1.0,1.0,1.0);
-    glTranslatef(65 , -25, -60);
-    glRotatef(90, 0, 0, 1);
-    glScalef(7, 7, 7);
-    glutSolidCube(1);
-    glPopMatrix();
-
-    glPushMatrix();
-    glColor3f(1.0,1.0,1.0);
-    glTranslatef(65 , -25, -60);
-    glRotatef(-90, 1, 0, 0);
-    glScalef(1, 1, 10);
-    glutSolidCone(4,1,50,1);
-    glPopMatrix();
-
-    //tiang bendera
-    glPushMatrix();
-    glColor3f(1.0,1.0,1.0);
-    glTranslatef(75 , -22.5, -150);
-    glRotatef(90, 1, 0, 0);
-    glScalef(1 ,1 , 15);
-    glutSolidCube(1);
-    glPopMatrix();
-
-    glPushMatrix();
-    glColor3f(1.0,1.0,1.0);
-    glTranslatef(75 , -16, -150);
-    glRotatef(45, 0, 0, 1);
-    glScalef(1, 1, 10);
-    glutSolidCone(1,0.5,4,1);
-    glPopMatrix();
 
     //kursi penonton bagian belakang
     glPushMatrix ();
@@ -512,6 +492,40 @@ void lapangan()
     glutSolidCube(2);
     glPopMatrix ();
 
+    //cone
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(65 , -25, -60);
+    glRotatef(90, 0, 0, 1);
+    glScalef(7, 7, 7);
+    glutSolidCube(1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(65 , -25, -60);
+    glRotatef(-90, 1, 0, 0);
+    glScalef(1, 1, 10);
+    glutSolidCone(4,1,50,1);
+    glPopMatrix();
+
+    //tiang bendera
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(75 , -22.5, -150);
+    glRotatef(90, 1, 0, 0);
+    glScalef(1 ,1 , 15);
+    glutSolidCube(1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(75 , -16, -150);
+    glRotatef(45, 0, 0, 1);
+    glScalef(1, 1, 10);
+    glutSolidCone(1,0.5,4,1);
+    glPopMatrix();
+
     //pager kursi penonton bagian belakang
     glPushMatrix();
     glColor3f(1.0,1.0,1.0);
@@ -624,6 +638,137 @@ void lapangan()
     glScalef(6,1,0.6);
     glutSolidCube(3);
     glPopMatrix();
+
+    //pager kursi penonton bagian depan kiri
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-60,-10,-25);
+    glRotatef(90,0,0,1);
+    glScalef(1.5,30,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-60,-2,-25);
+    glRotatef(90,0,0,1);
+    glScalef(1.5,30,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-61,10,-24);
+    glRotatef(90,0,0,1);
+    glScalef(1.5,28,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-60,-18,-25);
+    glRotatef(90,0,0,1);
+    glScalef(1.5,30,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-60,-15,-25);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-62,5,-25);
+    glRotatef(110,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-30,-15,-25);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(-32.5,5,-25);
+    glRotatef(110,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    //pager kursi penonton bagian depan kiri
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(60,-10,-25);
+    glRotatef(90,0,0,1);
+    glScalef(1.5,30,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(60,-2,-25);
+    glRotatef(90,0,0,1);
+    glScalef(1.5,30,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(61,10,-24);
+    glRotatef(90,0,0,1);
+    glScalef(1.5,28,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(60,-18,-25);
+    glRotatef(90,0,0,1);
+    glScalef(1.5,30,1);
+    glutSolidCube(2);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(60,-15,-25);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(62,5,-25);
+    glRotatef(70,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(30,-15,-25);
+    glRotatef(90,0,0,1);
+    glScalef(10,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(32.5,5,-25);
+    glRotatef(70,0,0,1);
+    glScalef(6,1,0.6);
+    glutSolidCube(3);
+    glPopMatrix();
+
 
     //pager kursi penonton bagian kanan
     glPushMatrix();
@@ -1021,11 +1166,6 @@ void lapangan()
     glRotatef (90, 0, 0, 1);
     glScalef (28 ,10 , 75.5);
     glutSolidCube(2);
-
-
-
-
-
 }
 
 void tampil()
