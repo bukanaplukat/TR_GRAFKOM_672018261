@@ -1157,7 +1157,6 @@ void lapangan()
     glutSolidCube(3);
     glPopMatrix();
 
-
     //atap
     glPushMatrix (); //kanan dinding
     glColor3f (1.0,1.0,1.0);
@@ -1346,13 +1345,10 @@ void lapangan()
 
 }
 
+
 void tampil()
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glLoadIdentity();
-    gluLookAt(0,0,3,0,0,0,0,1,0);
-    glRotatef(arot, 1, 0, 0);
-    glRotatef(brot, 0, 1, 0);
 
     glPushMatrix();
     lapangan();
@@ -1364,17 +1360,58 @@ void keyboard(unsigned char key, int a, int b)
 {
     switch(key)
     {
-        case '5':
-            if(is_depth)
-            {
-                is_depth=0;
-                glDisable(GL_DEPTH_TEST);
-            }
-            else
-            {
-                is_depth=1;
-                glEnable(GL_DEPTH_TEST);
-            }
+    case 'w' :
+    case 'W' :
+        glTranslated(0.0, 0.0, 3.0); 
+        break;
+    case 'd' :
+    case 'D' :
+        glTranslated(3.0, 0.0, 0.0);
+        break;
+    case 's' :
+    case 'S' :
+        glTranslated(0.0, 0.0, -3.0); 
+        break;
+    case 'a' :
+    case 'A' :
+        glTranslated(-3.0, 0.0, 0.0);
+        break;
+        case '1' :
+        glTranslated(0.0, 3.0, 0.0);
+        break;
+        case '2' :
+        glTranslated(0.0, -3.0, 0.0);
+        break;
+        case '3' :
+        glRotatef(2.0, 1.0, 0.0, 0.0);
+        break;
+        case '4' :
+        glRotatef(-2.0, 1.0, 0.0, 0.0);
+        break;
+        case '5' :
+        glRotatef(2.0, 0.0, 1.0, 0.0);
+        break;
+    case '6' :
+        glRotatef(-2.0, 0.0, 1.0, 0.0);
+        break;
+    case '7' :
+        glRotatef(2.0, 0.0, 0.0, 1.0);
+        break;
+    case '8' :
+        glRotatef(-2.0, 0.0, 0.0, 1.0);
+        break;
+    case '9' :
+        if (is_depth)
+        {
+
+            is_depth = 0;
+            glDisable(GL_DEPTH_TEST);
+        }
+        else
+        {
+            is_depth = 1;
+            glEnable(GL_DEPTH_TEST);
+        }
     }
     tampil();
 }
@@ -1404,6 +1441,10 @@ void mouseMotion(int a, int b){
 
         glutPostRedisplay();
     }
+    glLoadIdentity();
+    gluLookAt(0,0,3,0,0,0,0,1,0);
+    glRotatef(arot, 1, 0, 0);
+    glRotatef(brot, 0, 1, 0);
 }
 
 
@@ -1413,6 +1454,6 @@ void ukuran(int lebar, int tinggi){
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(50, lebar / tinggi, 5, 500);
-    glTranslatef(0, -40, -300);
+    glTranslatef(0, -40, -350);
     glMatrixMode(GL_MODELVIEW);
 }
