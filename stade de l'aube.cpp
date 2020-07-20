@@ -47,7 +47,22 @@ void init(void){
     glEnable(GL_LIGHT0);
     glEnable(GL_DEPTH_TEST);
     is_depth=1;
+    glLineWidth(3.0);
     glMatrixMode(GL_MODELVIEW);
+}
+
+
+void lingkaran( float titik_x, float titik_y,
+                float lebar_x, float lebar_y, float jml_sudut, float rotasi) {
+    GLfloat derajat = (360/ jml_sudut) * M_PI / 180;
+    glBegin(GL_LINE_STRIP);
+        GLfloat sudut = 0.0 - rotasi;
+        for (int _k = 0; _k < jml_sudut; ++_k)
+        {
+            glVertex2f(titik_x + (lebar_x * cos(sudut)), titik_y + (lebar_y * sin(sudut)));
+            sudut += derajat;
+        }
+    glEnd();
 }
 
 void lapangan()
@@ -78,6 +93,14 @@ void lapangan()
     glScalef (7.5 ,90 , 75);
     glutSolidCube(2);
     glPopMatrix ();
+
+    //lingkaran 1/2
+    glPushMatrix();
+    glColor3f (1.0,1.0,1.0);
+    glTranslatef(0, -21, 0);
+    glRotatef(90, 1, 0, 0);
+    lingkaran(0, -100, 9, 12, 100, 90);
+    glPopMatrix();
 
     //kursi penonton bagian depan
     glPushMatrix ();
@@ -183,7 +206,7 @@ void lapangan()
     glScalef (28 ,90 ,5);
     glutSolidCube(2);
     glPopMatrix ();
-	
+
     //pintu akses masuk
     glPushMatrix ();
     glColor3f (1.0,1.0,1.0);
@@ -1059,7 +1082,7 @@ void lapangan()
     glScalef (50,175 , 5);
     glutSolidCube(2);
     glPopMatrix ();
-  
+
     glPushMatrix (); //depan atap
     glColor3f (1.0,1.0,1.0);
     glTranslatef (0 , 60, 15);
@@ -1188,7 +1211,7 @@ void lapangan()
     glRotatef (90, 0, 0, 1);
     glScalef (28 ,10 , 75.5);
     glutSolidCube(2);
-	
+
 
 }
 
