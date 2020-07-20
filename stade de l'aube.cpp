@@ -1388,19 +1388,19 @@ void keyboard(unsigned char key, int a, int b)
         case '4' :
         glRotatef(-2.0, 1.0, 0.0, 0.0);
         break;
-        case '5' :
+        case '6' :
         glRotatef(2.0, 0.0, 1.0, 0.0);
         break;
-    case '6' :
+    case '7' :
         glRotatef(-2.0, 0.0, 1.0, 0.0);
         break;
-    case '7' :
+    case '8' :
         glRotatef(2.0, 0.0, 0.0, 1.0);
         break;
-    case '8' :
+    case '9' :
         glRotatef(-2.0, 0.0, 0.0, 1.0);
         break;
-    case '9' :
+    case '5' :
         if (is_depth)
         {
 
