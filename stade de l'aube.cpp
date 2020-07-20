@@ -202,6 +202,13 @@ void lapangan()
     glutSolidCube(2);
     glPopMatrix ();
 
+    //bola
+    glPushMatrix();
+    glColor3f(1,1,1);
+    glTranslatef(50,-20,-95);
+    glutWireSphere(3,100,10);
+    glPopMatrix();
+
     //lingkaran lapangan
     glBegin(GL_LINE_STRIP);
 	glColor3f(1.0,1.0,1.0);
@@ -367,6 +374,39 @@ void lapangan()
     glutWireCube(1);
     glPopMatrix ();
 
+    //cone
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(65 , -25, -60);
+    glRotatef(90, 0, 0, 1);
+    glScalef(7, 7, 7);
+    glutSolidCube(1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(65 , -25, -60);
+    glRotatef(-90, 1, 0, 0);
+    glScalef(1, 1, 10);
+    glutSolidCone(4,1,50,1);
+    glPopMatrix();
+
+    //tiang bendera
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(75 , -22.5, -150);
+    glRotatef(90, 1, 0, 0);
+    glScalef(1 ,1 , 15);
+    glutSolidCube(1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1.0,1.0,1.0);
+    glTranslatef(75 , -16, -150);
+    glRotatef(45, 0, 0, 1);
+    glScalef(1, 1, 10);
+    glutSolidCone(1,0.5,4,1);
+    glPopMatrix();
 
     //kursi penonton bagian belakang
     glPushMatrix ();
@@ -491,40 +531,6 @@ void lapangan()
     glScalef (4 ,1 , 45);
     glutSolidCube(2);
     glPopMatrix ();
-
-    //cone
-    glPushMatrix();
-    glColor3f(1.0,1.0,1.0);
-    glTranslatef(65 , -25, -60);
-    glRotatef(90, 0, 0, 1);
-    glScalef(7, 7, 7);
-    glutSolidCube(1);
-    glPopMatrix();
-
-    glPushMatrix();
-    glColor3f(1.0,1.0,1.0);
-    glTranslatef(65 , -25, -60);
-    glRotatef(-90, 1, 0, 0);
-    glScalef(1, 1, 10);
-    glutSolidCone(4,1,50,1);
-    glPopMatrix();
-
-    //tiang bendera
-    glPushMatrix();
-    glColor3f(1.0,1.0,1.0);
-    glTranslatef(75 , -22.5, -150);
-    glRotatef(90, 1, 0, 0);
-    glScalef(1 ,1 , 15);
-    glutSolidCube(1);
-    glPopMatrix();
-
-    glPushMatrix();
-    glColor3f(1.0,1.0,1.0);
-    glTranslatef(75 , -16, -150);
-    glRotatef(45, 0, 0, 1);
-    glScalef(1, 1, 10);
-    glutSolidCone(1,0.5,4,1);
-    glPopMatrix();
 
     //pager kursi penonton bagian belakang
     glPushMatrix();
