@@ -6,8 +6,9 @@
 void init(void);
 void tampil(void);
 void mouse(int button, int state, int a, int b);
-void keyboard(unsigned char, int, int);
+void myKeyboard(unsigned char key, int w, int o);
 void ukuran(int, int);
+void timer(int value);
 void mouseMotion(int a, int b);
 
 float arot=0.0f;
@@ -16,18 +17,22 @@ float adiff=0.0f;
 float bdiff=0.0f;
 bool mouseDown=false;
 int is_depth;
+int k=0; int l=0; int rot;
+int a=800, b=600,o=0;
+int ok=0, pk=0, c=0, qk=0;
 
 int main(int argc, char **argv){
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
-	glutInitWindowSize(800, 600);
-	glutInitWindowPosition(20, 20);
+	glutInitWindowPosition(100,100);
+    glutInitWindowSize(a,b);
 	glutCreateWindow("STADE DE L'AUBE");
+	gluOrtho2D(-a/2,a/2,-b/2,b/2);
 	init();
 	glutDisplayFunc(tampil);
-	glutKeyboardFunc(keyboard);
+	glutKeyboardFunc(myKeyboard);
 	glutReshapeFunc(ukuran);
-
+    glutTimerFunc(1000, timer, 0);
 	glutMouseFunc(mouse);
 	glutMotionFunc(mouseMotion);
 
@@ -37,7 +42,7 @@ int main(int argc, char **argv){
 }
 
 void init(void){
-    glClearColor(0.0, 0.0, 0.0, 0.0);
+    glClearColor(1.0, 1.0, 4.0, 4.0);
     glMatrixMode(GL_PROJECTION);
     glEnable(GL_LIGHTING);
     glEnable(GL_COLOR_MATERIAL);
@@ -58,6 +63,19 @@ void lingkaran( float titik_x, float titik_y,
         {
             glVertex2f(titik_x + (lebar_x * cos(sudut)), titik_y + (lebar_y * sin(sudut)));
             sudut += derajat;
+        }
+    glEnd();
+}
+
+void lingkaran2(int ag, int bg, int x, int z){
+    float o,a,b;
+    glColor4ub(k,2,l,6);
+    glBegin(GL_POLYGON);
+        o=6.28/z;
+        for (int k=0; k<z; k++){
+            a = ag+x * cos(k*o);
+            b = bg+x * sin(k*o);
+            glVertex2d(a,b);
         }
     glEnd();
 }
@@ -1764,7 +1782,23 @@ void lapangan()
 
 void tampil()
 {
+    glClearColor (0.2f, 0.8f, 0.8f, 0.1f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glLoadIdentity();
+    gluLookAt(0,0,3,0,0,0,0,1,0);
+    glRotatef(arot, 1, 0, 0);
+    glRotatef(brot, 0, 1, 0);
+    glTranslatef(0,0,-100);
+    glRotatef(c,ok,pk,qk);
+    glTranslatef(0,0,o);
+
+    glPushMatrix();
+    glRotatef(rot*-2, -1.0f, 6.0f, -9.0f);
+    lingkaran2(-200,250,15,15);
+    k+=20;
+    l+=1;
+    glPopMatrix();
+    glEnd();
 
     glPushMatrix();
     lapangan();
@@ -1772,55 +1806,39 @@ void tampil()
     glutSwapBuffers();
 }
 
-void keyboard(unsigned char key, int a, int b)
-{
-    switch(key)
-    {
-    case 'w' :
-    case 'W' :
-        glTranslated(0.0, 0.0, 3.0);
-        break;
-    case 'd' :
-    case 'D' :
-        glTranslated(3.0, 0.0, 0.0);
-        break;
-    case 's' :
-    case 'S' :
-        glTranslated(0.0, 0.0, -3.0);
-        break;
-    case 'a' :
-    case 'A' :
-        glTranslated(-3.0, 0.0, 0.0);
-        break;
-    case '1' :
-        glTranslated(0.0, 3.0, 0.0);
-        break;
-    case '2' :
-        glTranslated(0.0, -3.0, 0.0);
-        break;
-    case '3' :
-        glRotatef(2.0, 1.0, 0.0, 0.0);
-        break;
-    case '4' :
-        glRotatef(-2.0, 1.0, 0.0, 0.0);
-        break;
-    case '6' :
-        glRotatef(2.0, 0.0, 1.0, 0.0);
-        break;
-    case '7' :
-        glRotatef(-2.0, 0.0, 1.0, 0.0);
-        break;
-    case '8' :
-        glRotatef(2.0, 0.0, 0.0, 1.0);
-        break;
-    case '9' :
-        glRotatef(-2.0, 0.0, 0.0, 1.0);
-        break;
-    case '5' :
-        if (is_depth)
-        {
+void timer(int value){
+       rot+=30;
+       glutPostRedisplay();
+       glutTimerFunc(1000, timer, 0);
+}
 
-            is_depth = 0;
+void myKeyboard(unsigned char key, int w, int o){
+
+    if (key == 'w'){
+    pk=1;ok=0;qk=0;c+=-10;
+    }
+    else if (key == 'o'){
+    pk=0;ok=0;qk=1;c+=-10;
+    }
+    else if (key == '1'){
+    pk=0;ok=1;qk=0;c+=-10;
+    }
+    else if (key == '2'){
+    pk=0;ok=1;qk=0;c+=10;
+    }
+    else if (key == '3'){
+    pk=0;ok=0;qk=1;c+=10;
+    }
+    else if (key == '4'){
+    pk=1;ok=0;qk=1;c+=10;
+    }
+    else if (key == '5'){
+    pk=-1;ok=1;qk=0;c+=10;  //x,y,z,c.jarak putar
+    }
+    else if (key == '6'){
+    if (is_depth)
+        {
+        is_depth = 0;
             glDisable(GL_DEPTH_TEST);
         }
         else
@@ -1828,8 +1846,8 @@ void keyboard(unsigned char key, int a, int b)
             is_depth = 1;
             glEnable(GL_DEPTH_TEST);
         }
-    }
     tampil();
+    }
 }
 
 void idle(){
@@ -1857,10 +1875,6 @@ void mouseMotion(int a, int b){
 
         glutPostRedisplay();
     }
-    glLoadIdentity();
-    gluLookAt(0,0,3,0,0,0,0,1,0);
-    glRotatef(arot, 1, 0, 0);
-    glRotatef(brot, 0, 1, 0);
 }
 
 
@@ -1870,6 +1884,6 @@ void ukuran(int lebar, int tinggi){
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(60, lebar / tinggi, 5, 1000);
-    glTranslatef(0, -40, -450);
+    glTranslatef(0, -80, -450);
     glMatrixMode(GL_MODELVIEW);
 }
